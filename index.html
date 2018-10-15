@@ -1,8 +1,73 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
 <head>
-<title>Frontend Applicant Test</title>
+  <title>Frontend Applicant Test</title>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="dist/app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="dist/css/app.css">
+
 </head>
-<body>
+<body ng-app="app" ng-controller="CountryController" ng-init="initialize()">
+  <div class="country container">
+    <div class="country--header">
+      <p class="country--header-co">industry<strong>weapon</strong></p>
+      <h1>Frontend Applicant Test</h1>
+      <hr />
+    </div>
+    <div class="country--body">
+      <div class="country--body-report-header">
+        <h4 class="country--body-content-report">Content Report</h4>
+        <h4 class="country--body-device-count">Total devices worldwide: {{devices}}</h4>
+        <h4 class="country--body-channel-count">Total channels worldwide: {{channels}}</h4>
+        <hr />
+      </div>
+      <div class="country--select-block">
+        <select id="country-select"
+                name="countrySelect"
+                ng-model="countrySelected"
+                ng-options="country as country.country for country in countries"
+                ng-change="updateCountry()"
+        >
+          <option value="">All</option>
+        </select>
+      </div>
+    </div>
+    <div class="country--selected">
+      <table cellspacing="0">
+        <tbody>
+          <tr class="country--selected-bars" ng-repeat="country in selectedCountry">
+            <td>{{country.country}}</td>
+            <td>
+              <table cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td class="country-bar-device"
+                        ng-style="{ 'backgroundColor': '#0B62A4',
+                                    'color': 'white',
+                                    'padding': '8px 0',
+                                    'textAlign': 'center',
+                                    'width': '{{country.data.Devices}}px' }"
+                    >
+                      {{country.data.Devices}}
+                    </td>
+                    <td class="country-bar-channel"
+                        ng-style="{ 'backgroundColor': '#18C918',
+                                    'color': 'white',
+                                    'padding': '8px 0',
+                                    'textAlign': 'center',
+                                    'width': '{{country.data.Channels}}px' }"
+                    >
+                      {{country.data.Channels}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

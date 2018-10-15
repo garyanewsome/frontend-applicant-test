@@ -4,5 +4,8 @@
   "description": "Programming test for Industry Weapon applicants",
   "main": "index.html",
   "author": "Industry Weapon",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5"
+  }
 }

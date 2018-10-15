@@ -1,0 +1,63 @@
+body {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  background-color: #FFFFFF;
+  color: #333333; }
+
+h1 {
+  font-size: 2.0em; }
+
+h2 {
+  font-size: 1.7411em; }
+
+h3 {
+  font-size: 1.5157em; }
+
+h4 {
+  font-size: 1.3195em; }
+
+h5 {
+  font-size: 1.1487em; }
+
+h6 {
+  font-size: 1.0em; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+@media screen and (min-width: 415px) {
+  .container {
+    width: 92%; } }
+.country .country--header .country--header-co {
+  text-align: right; }
+.country .country--body .country--body-report-header {
+  margin-bottom: 1em; }
+  .country .country--body .country--body-report-header .country--body-content-report {
+    margin-bottom: 4px; }
+  .country .country--body .country--body-report-header .country--body-device-count {
+    margin: 4px 0;
+    text-align: right;
+    color: #0B62A4; }
+  .country .country--body .country--body-report-header .country--body-channel-count {
+    margin: 4px 0;
+    text-align: right;
+    color: #18C918; }
+.country .country--body .country--select-block #country-select {
+  font-size: 1.1em;
+  margin-bottom: 1em; }
+.country .country--body .country--selected .country--selected-bars {
+  width: 100%; }
+  .country .country--body .country--selected .country--selected-bars table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  .country .country--body .country--selected .country--selected-bars .country-bar-device {
+    text-align: center;
+    background-color: #0B62A4;
+    color: #EEEEEE; }
+  .country .country--body .country--selected .country--selected-bars .country-bar-channel {
+    text-align: center;
+    background-color: #18C918;
+    color: #EEEEEE; }
+
+/*# sourceMappingURL=app.css.map */
